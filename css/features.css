@@ -1,0 +1,306 @@
+/*----------------- CONTAINERS -----------------*/
+.features-containers {
+    display: flex;
+    margin: 40px 60px 60px 60px;
+    gap: 20px;
+}
+
+.accomodations-container {
+    flex-basis: 65%;
+    background-color: var(--grey);
+    padding: 50px 40px;
+    border-radius: 25px;
+}
+
+.popular-container {
+    flex-basis: 32%;
+    background-color: var(--grey);
+    padding: 50px 40px;
+    border-radius: 25px;
+}
+
+.pop-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -----------------CARDS -----------------*/
+div.all-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.all-pop-cards a {
+    padding: 0;
+    min-width: 250px;
+}
+
+.all-cards a {
+    padding: 0;
+    flex-grow: 1;
+    flex-basis: 30%;
+    min-width: 250px;
+}
+
+.acc-card,
+.pop-cards {
+    border: 6px solid #fff;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.acc-card {
+    height: 275px;
+}
+
+.pop-cards {
+    height: 175px;
+}
+
+.acc-card:hover,
+.pop-cards:hover {
+    box-shadow: 0 8px 16px 0 var(--darkShadow);
+}
+
+.acc-container {
+    position: relative;
+    top: -35px;
+    line-height: 28px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+.acc-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    top: -30px;
+    z-index: 0;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 25px;
+    transition: 200ms;
+}
+
+h3:hover {
+    color: var(--blue);
+}
+
+.card-text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.card-text span {
+    padding: 0;
+    font-weight: 700;
+}
+
+.fa-blue {
+    color: var(--blue);
+}
+
+.fa-grey {
+    color: var(--grey);
+}
+
+.acc-display {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    margin-top: -30px;
+}
+
+.acc-display:hover {
+    color: var(--blue);
+}
+
+/*----------------- POPULAR CARDS -----------------*/
+div.all-pop-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pop-cards {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+.pop-img {
+    height: 200px;
+    min-width: 90px;
+    width: 160px;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    top: -30px;
+    z-index: 0;
+}
+
+.pop-container {
+    background-color: #fff;
+    flex-basis: 60%;
+    position: relative;
+    margin: 10px;
+}
+
+.pop-container div.fa-stars {
+    display: flex;
+}
+
+div.fa-stars {
+    position: absolute;
+    bottom: 0;
+}
+
+/*-----------------  MEDIA QUERIES TABLET   -------------------*/
+@media screen and (max-width: 1200px) {
+    .features-containers {
+        flex-direction: column;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .accomodations-container {
+        background-color: #fff;
+        padding: 30px 20px;
+        order: 2;
+    }
+    .popular-container {
+        background-color: var(--grey);
+        border-radius: 0px;
+        padding: 25px;
+        order: 1;
+    }
+
+    .card-text {
+        font-size: 16px
+    }
+
+    div.all-pop-cards {
+        flex-direction: row;
+    }
+
+    div.all-pop-cards > a {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    div.all-cards {
+        justify-content: space-around;
+    }
+}
+
+/*----------------- POPULATION CARDS -----------------*/
+@media screen and (max-width: 840px) {
+    div.all-pop-cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*-----------------  MEDIA QUERIES MOBILE   -------------------*/
+@media screen and (max-width: 768px) {
+    .fa-chart-line {
+        font-size: 25px;
+    }
+
+    div.all-cards {
+        gap: 10px;
+    }
+
+    .all-cards a {
+        flex-basis: 100%;
+    }
+
+    .acc-card {
+        border: 5px solid #fff;
+        min-width: 100%;
+        height: 200px;
+    }
+
+    .acc-img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .acc-container {
+        background-color: #fff;
+        line-height: 18px;
+        position: relative;
+        top: -103px;
+        padding-top: 6px;
+        padding-left: 12px;
+    }
+
+    .fa-star {
+        font-size: small;
+    }
+
+    .acc-display {
+        justify-content: left;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    h3:hover {
+        color: var(--blue);
+    }
+
+    .card-text {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .pop-cards  {
+        height: 138px;
+        border: 5px solid #fff;
+    }
+
+    div.pop-img {
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
+@media screen and (max-width: 372px) {
+    .pop-container > h3 {
+        font-size: 16px;
+    }
+
+    .pop-container {
+        margin: 4px;
+    }
+
+    p.card-text {
+        font-size: 14px;
+    }
+
+    .item > figcaption > h3 {
+        padding-left: 5px;
+    }
+
+    .pop-img {
+        max-width: 75px;
+    }
+}
